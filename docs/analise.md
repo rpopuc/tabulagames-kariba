@@ -1,0 +1,6 @@
+Um jogo de cartas, constituído apenas de um baralho de 64 cartas numeradas de 1 a 8, havendo oito cópias de cada número, aceita de 2 a 4 jogadores. O objetivo do jogo é coletar o maior número de cartas possíveis. No início do jogo, as 64 cartas são embaralhadas e então, são distribuídas 5 cartas para cada jogador. Cada jogador, em seu turno, pode escolher uma ou mais cartas (com o mesmo número) de sua mão e colocá-las em uma das filas na mesa, de acordo com o número da carta. Se a fila correspondente ao número da carta ainda não existir, o jogador deve criá-la. Quando uma fila tem mais de três cartas, o jogador pode pegar para si todas as cartas de uma fila de número inferior à carta colocada, verificando a próxima fila inferior, até que exista uma fila com cartas ou a fila 1 esteja vazia. Há uma regra especial para a fila 1, que pode coletar apenas cartas da fila 8. Ao final do turno, o jogador deve receber novas cartas, suficientes para que ele volte a ter, no máximo, cinco cartas na mão. O jogo termina ao final do turno em que o jogador ficar sem cartas e não houver mais cartas disponíveis para compra. Ao final do jogo, as cartas coletadas pelos jogadores são contadas e o jogador com mais cartas é o vencedor.
+
+Componentes
+- 64 cartas
+    - 7 conjuntos de cartas numeradas de 1 a 8
+

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="board"></canvas>
+
+    <script src="Game.js"></script>
+    <script src="Drawer.js"></script>
+    <script>
+        var game = new Game(2)
+        var drawer = new Drawer(game, document.getElementById("board"))
+        game.setup();
+        drawer.draw();
+    </script>
+</body>
+</html>

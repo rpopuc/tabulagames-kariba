@@ -1,6 +1,6 @@
 # Kariba
 
-Implementação do jogo Kariba em Javascript.
+Implementação do jogo Kariba (https://boardgamegeek.com/boardgame/84732/kariba) em Javascript.
 
 Utiliza canvas para desenho da interface.
 

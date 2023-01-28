@@ -86,7 +86,10 @@ class Game {
         }
 
         const cardValue = this.players[this.currentPlayer][cards[0]];
-        this.putCardsOnTable(this.currentPlayer, cards);
+        if (!this.putCardsOnTable(this.currentPlayer, cards)) {
+            throw new Error('Invalid set of cards');
+        }
+
         this.collectCards(this.currentPlayer, cardValue);
         this.refillPlayersHand(this.currentPlayer);
         this.verifyGameEnd();
@@ -150,6 +153,10 @@ class Game {
     }
 
     putCardsOnTable(playerIndex, cards) {
+        if (!this.validateActionPut(playerIndex, cards)) {
+            return false
+        }
+
         this.players[playerIndex] = this.players[playerIndex].filter((card, index) => {
             if (!cards.includes(index)) {
                 return true;
@@ -158,6 +165,18 @@ class Game {
             this.table[card]++;
             return false;
         })
+
+        return true
     }
+
+    validateActionPut(playerIndex, cards) {
+        const cardValue = this.players[this.currentPlayer][cards[0]];
+        return cards.every(index => {
+            let playerCard = this.players[playerIndex][index] ?? null
+            return playerCard !== null
+                && playerCard === cardValue
+        })
+    }
+
 }
 

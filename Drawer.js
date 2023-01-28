@@ -13,7 +13,11 @@ class Drawer {
                 const selectedCards = this.game.selectedCards.map((selected, index) => {
                     return selected ? index : -1
                 }).filter(index => index >= 0)
-                this.game.actionPlayCard(selectedCards)
+                try {
+                    this.game.actionPlayCard(selectedCards)
+                } catch (error) {
+                    alert(error.message, 'Error')
+                }
                 this.draw()
                 return;
             }
